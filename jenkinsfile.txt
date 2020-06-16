@@ -1,0 +1,49 @@
+// Declarative Pipeline Script
+// Author  : Shireesha Monduti
+// Version : 1.0
+
+
+
+pipeline {
+    agent any
+	
+	
+	stages {
+		stage('WorkspaceCleanup'){
+			steps {
+				script {
+					try {
+						cleanWs()
+																		
+				}catch (err) {                                        
+					unstable(message: "unstable")
+				}
+			}
+		  }
+		}
+	
+		
+		stage("Env Variables") {
+			steps {
+				script {
+					try {
+								
+								
+				}catch (err) {                                        
+					unstable(message: "unstable")
+				}
+			}
+		  }
+		}
+		
+		stage('SCM Checkout') {			
+					steps{
+						script {
+						
+							checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'smondut', url: 'https://github.com/shireeshamonduti/SeleniumWebTesting.git']]])
+							
+						}
+					}
+				}	
+			}
+		}
