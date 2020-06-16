@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							bat 'mvn clean test'
+							bat 'mvn clean test -Dselenium.browser=chrome'
 							
 						}
 					}
