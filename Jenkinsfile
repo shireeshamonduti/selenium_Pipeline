@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							sh 'mvn -Dmaven.test.failure.ignore=true install'
+							bat 'mvn -f workspace/Selenium_Testcase_Pipeline/pom.xml clean test'
 							
 						}
 					}
