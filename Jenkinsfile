@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							mvn test
+							mvn clean Test
 							
 						}
 					}
