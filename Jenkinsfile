@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							mvn clean Test
+							bat 'mvn clean Test'
 							
 						}
 					}
