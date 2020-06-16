@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							bat 'mvn -f /pom.xml clean test'
+							bat 'mvn clean test'
 							
 						}
 					}
