@@ -1,9 +1,3 @@
-// Declarative Pipeline Script
-// Author  : Shireesha Monduti
-// Version : 1.0
-
-
-
 pipeline {
     agent any
 	
@@ -47,3 +41,4 @@ pipeline {
 				}	
 			}
 		}
+
