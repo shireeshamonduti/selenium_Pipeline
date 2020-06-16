@@ -39,6 +39,16 @@ pipeline {
 						}
 					}
 				}	
+				
+		stage('Selenium_TestRun') {			
+					steps{
+						script {
+						
+							mvn test
+							
+						}
+					}
+				}
 			}
 		}
 
