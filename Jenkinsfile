@@ -7,7 +7,7 @@ pipeline {
 			steps {
 				script {
 					try {
-						cleanWs()
+						//cleanWs()
 																		
 				}catch (err) {                                        
 					unstable(message: "unstable")
@@ -33,7 +33,7 @@ pipeline {
 		stage('SCM Checkout') {			
 					steps{
 						script {
-						
+							
 							checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'smondut', url: 'https://github.com/shireeshamonduti/SeleniumWebTesting.git']]])
 							
 						}
