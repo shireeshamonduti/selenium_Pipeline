@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							bat 'mvn -f workspace/Selenium_Testcase_Pipeline/pom.xml clean test'
+							bat 'mvn -f /pom.xml clean test'
 							
 						}
 					}
