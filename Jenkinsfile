@@ -44,7 +44,7 @@ pipeline {
 					steps{
 						script {
 						
-							bat 'mvn clean Test'
+							sh 'mvn -Dmaven.test.failure.ignore=true install'
 							
 						}
 					}
